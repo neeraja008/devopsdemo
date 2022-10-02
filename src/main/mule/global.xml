@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="a64e38e1-f14e-4eca-9933-dcd89b2d5f75" >
+		<http:listener-connection host="${http.host}" port="${http.port}" />
+	</http:listener-config>
+	<configuration-properties doc:name="Configuration properties" doc:id="4bbb20a7-9b7e-41fb-97ac-9fda852d0c20" file="config\dev.yaml" />
+	<global-property doc:name="Global Property" doc:id="9050c119-4c17-4586-ab64-d5d8807a8d0a" name="env" value="dev" />
+	<file:config name="File_Config" doc:name="File Config" doc:id="4e5b3f29-b60a-47e5-b979-ed61ce1a9eb9" >
+		<file:connection workingDir="${file.workingDirectory}" />
+	</file:config>
+</mule>

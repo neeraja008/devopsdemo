@@ -1,0 +1,10 @@
+http:
+  host: "localhost"
+  port: "8081"
+  
+file:
+   workingDirectory: C:\Users\golimneeraja\Downloads
+   path: C:\Users\golimneeraja\Downloads\empdetails1.csv
+        
+api:
+  path: "/testing"    
